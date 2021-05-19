@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy to Production') {
             steps {
                 s3Upload(
-                    bucket: env.S3_BUCKET_TEST,
+                    bucket: env.S3_BUCKET_PRODUCTION,
                     includePathPattern: '**/*',
                     excludePathPattern: 'Jenkinsfile'
                 )
