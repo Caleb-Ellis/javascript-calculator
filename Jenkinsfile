@@ -8,14 +8,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                snDevOpsStep()
+                snDevOpsStep(enabled:true)
                 
                 git 'https://github.com/mozaic-services/javascript-calculator'
             }
         }
         stage('Deploy to Test') {
             steps {
-                snDevOpsStep()
+                snDevOpsStep(enabled:true)
                 
                 s3Upload(
                     bucket: env.S3_BUCKET_TEST,
