@@ -7,16 +7,12 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                snDevOpsStep()
-                
+            steps {                
                 git 'https://github.com/mozaic-services/javascript-calculator'
             }
         }
         stage('Deploy to Test') {
-            steps {
-                snDevOpsStep()
-                
+            steps {                
                 s3Upload(
                     bucket: env.S3_BUCKET_TEST,
                     includePathPattern: '**/*',
@@ -26,10 +22,7 @@ pipeline {
         }
 
         stage('Wait for approval') {
-            steps {
-                snDevOpsStep()
-                snDevOpsChange()
-            }
+            snDevOpsChange()
         }
 
         stage('Deploy to Production') {
