@@ -22,13 +22,13 @@ pipeline {
         }
 
         stage('Wait for approval') {
-            snDevOpsChange()
+            steps {
+                snDevOpsChange()
+            }
         }
 
         stage('Deploy to Production') {
             steps {
-                snDevOpsChange()
-
                 s3Upload(
                     bucket: env.S3_BUCKET_PRODUCTION,
                     includePathPattern: '**/*',
