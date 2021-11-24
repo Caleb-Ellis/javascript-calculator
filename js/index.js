@@ -31,10 +31,9 @@ $(document).ready(function() {
         break;
       case "=":
         // No BUG:
-        // eqn += log;
+        eqn += log;
         // BUG:
         // eqn = log;
-        eqn += log;
         history = eqn;
         log = String(eval(eqn));
         eqn = "";
