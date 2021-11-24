@@ -30,7 +30,11 @@ $(document).ready(function() {
         log = "0";
         break;
       case "=":
-        eqn += log;
+        // No BUG:
+        // eqn += log;
+        // BUG:
+        // eqn = log;
+        eqn = log;
         history = eqn;
         log = String(eval(eqn));
         eqn = "";
