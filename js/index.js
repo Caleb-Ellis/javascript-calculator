@@ -30,6 +30,10 @@ $(document).ready(function() {
         log = "0";
         break;
       case "=":
+        // No BUG:
+        // eqn += log;
+        // BUG:
+        // eqn = log;
         eqn += log;
         history = eqn;
         log = String(eval(eqn));
