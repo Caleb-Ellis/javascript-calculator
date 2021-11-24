@@ -30,7 +30,7 @@ $(document).ready(function() {
         log = "0";
         break;
       case "=":
-        // No BUG:
+        // No BUG: touched comment
         eqn += log;
         // BUG:
         // eqn = log;
