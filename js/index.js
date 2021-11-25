@@ -31,9 +31,9 @@ $(document).ready(function() {
         break;
       case "=":
         // No BUG
-        // eqn += log;
-        // BUG: Deploy rhe buggy code
-        eqn = log;
+        eqn += lo;
+        // BUG: Deploy the buggy code by uncommenting the line below and commenting out the line above
+        // eqn = log;
         history = eqn;
         log = String(eval(eqn));
         eqn = "";
