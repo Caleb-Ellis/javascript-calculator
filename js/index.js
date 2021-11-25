@@ -32,7 +32,7 @@ $(document).ready(function() {
       case "=":
         // No BUG
         // eqn += log;
-        // BUG:
+        // BUG: Deploy rhe buggy code
         eqn = log;
         history = eqn;
         log = String(eval(eqn));
