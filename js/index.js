@@ -30,8 +30,8 @@ $(document).ready(function() {
         log = "0";
         break;
       case "=":
-        // No//  BUG
-        eqn += log;
+        // No BUG
+        // eqn += log;
         // BUG:
         eqn = log;
         history = eqn;
