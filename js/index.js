@@ -31,7 +31,7 @@ $(document).ready(function() {
         break;
       case "=":
         // No BUG
-        eqn += lo;
+        eqn += log;
         // BUG: Deploy the buggy code by uncommenting the line below and commenting out the line above
         // eqn = log;
         history = eqn;
