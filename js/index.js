@@ -30,10 +30,10 @@ $(document).ready(function() {
         log = "0";
         break;
       case "=":
-        // No BUG
-        eqn += log;
+        // No BUG - touch comment
+        // eqn += log;
         // BUG: Deploy the buggy code by uncommenting the line below and commenting out the line above
-        // eqn = log;
+        eqn = log;
         history = eqn;
         log = String(eval(eqn));
         eqn = "";
